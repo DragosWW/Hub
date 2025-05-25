@@ -1,0 +1,10 @@
+/* frontend/src/pages/LoginPage.css */
+.auth-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); /* Ajustează 160px în funcție de înălțimea header + footer */
+  padding: 20px;
+  background-color: #e9ecef; /* Un fundal neutru pentru paginile de autentificare */
+}

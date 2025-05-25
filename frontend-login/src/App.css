@@ -1,0 +1,131 @@
+/* frontend/src/App.css */
+/* ... (stilurile existente pentru body, html, #root, .app-container, .app-main-content, .app-footer, .loading-message) ... */
+/* Asigură-te că acestea sunt prezente din versiunea anterioară a App.css */
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-nav {
+  padding: 10px 25px; /* Padding ajustat */
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* ALINIAZĂ ELEMENTELE: stânga, centru (dacă e cazul), dreapta */
+  align-items: center;
+  flex-wrap: wrap; /* Permite trecerea pe rândul următor pe ecrane mici */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 60px; /* Înălțime minimă pentru header */
+}
+
+.nav-brand {
+  /* Stil pentru logo/numele aplicației */
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.app-nav-brand-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 0; /* Padding doar vertical pentru a nu afecta alinierea */
+}
+.app-nav-brand-link:hover {
+  color: #1abc9c;
+}
+
+.nav-links-main {
+  /* Grup pentru link-urile principale de navigare */
+  display: flex;
+  gap: 20px; /* Spațiu între link-urile principale */
+  justify-content: center; /* Centrează acest grup dacă spațiul permite */
+  flex-grow: 1; /* Permite acestui grup să ocupe spațiul din mijloc */
+  /* Pe ecrane mici, s-ar putea să vrei să ajustezi acest comportament */
+}
+
+.nav-links-auth {
+  /* Grup pentru link-urile de autentificare/profil */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.app-nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em; /* Consistență în mărimea fontului */
+  white-space: nowrap; /* Previne ruperea textului link-ului pe mai multe rânduri */
+}
+
+.app-nav-link:hover,
+button.app-nav-link:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.app-nav-link-active {
+  background-color: #1abc9c !important; /* Verde mentă pentru activ */
+  color: #2c3e50 !important; /* Text mai închis pentru contrast */
+  font-weight: bold;
+}
+
+/* Stil specific pentru butonul de logout dacă vrei să arate diferit */
+.logout-button-styled {
+  /* Moștenește .app-nav-link dar poți suprascrie */
+  background-color: #e74c3c; /* Un roșu pentru logout */
+  color: white !important; /* Asigură text alb */
+}
+
+.logout-button-styled:hover {
+  background-color: #c0392b !important; /* Un roșu mai închis la hover */
+}
+
+.nav-user-greeting { /* Stil pentru salutul opțional */
+  margin-right: 15px;
+  color: #bdc3c7; /* O culoare mai discretă */
+}
+
+
+.app-main-content {
+  flex-grow: 1;
+  padding: 25px;
+  background-color: #ffffff;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: #adb5bd;
+  border-top: 1px solid #495057;
+  margin-top: auto;
+  font-size: 0.9em;
+}
+.app-footer p {
+    margin: 0;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: #555;
+}

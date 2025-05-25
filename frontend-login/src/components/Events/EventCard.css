@@ -1,0 +1,117 @@
+/* frontend/src/components/Events/EventCard.css */
+.event-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px; /* Colțuri mai rotunjite */
+  margin: 15px;
+  width: 320px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranziție mai suavă */
+  overflow: hidden; /* Pentru a tăia colțurile imaginii dacă e necesar */
+}
+
+.event-card:hover {
+  transform: translateY(-8px); /* Efect de ridicare mai pronunțat */
+  box-shadow: 0 8px Mpx rgba(0, 0, 0, 0.15); /* Umbră mai puternică */
+}
+
+.event-card-image {
+  width: 100%;
+  height: 180px; /* Înălțime fixă pentru imagine */
+  object-fit: cover; /* Asigură că imaginea acoperă spațiul fără a se deforma */
+}
+
+.event-card-image-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: #007bff; /* O culoare de fundal pentru placeholder */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3em; /* Mărime mare pentru inițială */
+  font-weight: bold;
+}
+
+.event-card-image-placeholder-text {
+  opacity: 0.7;
+}
+
+.event-card-content {
+  padding: 20px;
+  flex-grow: 1; /* Permite acestei secțiuni să umple spațiul */
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #343a40;
+  font-size: 1.3em; /* Mărime ajustată */
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.event-card-detail,
+.event-card-location {
+  color: #495057; /* Culoare text puțin mai deschisă */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  display: flex; /* Pentru aliniere iconiță cu text */
+  align-items: center;
+}
+
+.event-card-detail span[role="img"],
+.event-card-location span[role="img"] {
+  margin-right: 8px; /* Spațiu după iconiță */
+  font-size: 1.1em; /* Mărime iconiță */
+  color: #007bff; /* Culoare pentru iconițe */
+}
+
+
+.event-card-description {
+  color: #6c757d; /* Gri mai deschis pentru descriere */
+  font-size: 0.85em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.event-card-actions {
+  padding: 0 20px 20px 20px; /* Padding doar în partea de jos a conținutului */
+}
+
+.event-card-button {
+  padding: 12px 15px; /* Padding mai mare pentru buton */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.95em;
+}
+
+.event-card-button:active {
+    transform: scale(0.98); /* Efect la click */
+}
+
+.event-card-button-add {
+  background-color: #007bff;
+}
+.event-card-button-add:hover {
+  background-color: #0056b3;
+}
+
+.event-card-button-added {
+  background-color: #28a745;
+}
+.event-card-button-added:hover {
+  background-color: #218838;
+}

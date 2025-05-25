@@ -1,0 +1,226 @@
+/* frontend/src/pages/CalendarPage.css */
+.calendar-page-container {
+  height: calc(100vh - 100px); /* Ajustează înălțimea totală a paginii dacă header-ul e mai mic/mare */
+  padding: 20px 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9; /* Fundal foarte deschis */
+  border-radius: 0; /* Sau lasă-l dacă preferi colțuri rotunjite pentru toată pagina */
+  /* box-shadow: none; */ /* Elimină umbra containerului principal dacă vrei un look mai plat */
+}
+
+.calendar-page-title {
+  text-align: center;
+  margin-bottom: 15px; /* Redus puțin spațiul */
+  font-size: 2em;
+  color: #33475b; /* O nuanță de albastru închis */
+  font-weight: 700;
+}
+
+/* Legenda */
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Spațiu între itemii legendei */
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.legend-title {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #33475b;
+  align-self: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.legend-color-box {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 7px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.highlighted-indicator { /* Pentru legenda evenimentelor adăugate */
+  background-color: transparent !important; /* Scoate fundalul dacă folosim text/icon */
+  border: 2px solid #28a745 !important; /* O bordură verde distinctă */
+  color: #28a745;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 11px; /* Ajustează pentru aliniere verticală a textului/iconiței */
+  width: 13px; /* Ca să fie pătrat cu bordura */
+  height: 13px;
+}
+
+
+/* Stilizarea generală a containerului calendarului */
+.custom-calendar-style .rbc-calendar {
+  border-radius: 8px; /* Colțuri mai rotunjite pentru calendar */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border: 1px solid #ddd; /* O bordură subtilă pentru calendar */
+}
+
+/* Stilizarea Toolbar-ului */
+.custom-calendar-style .rbc-toolbar {
+  background-color: #fff; /* Fundal alb pentru toolbar */
+  border-bottom: 1px solid #ddd;
+  padding: 12px 18px; /* Padding mărit */
+  border-radius: 8px 8px 0 0;
+}
+
+.custom-calendar-style .rbc-toolbar .rbc-toolbar-label {
+  font-size: 1.5em;
+  font-weight: 600; /* Mai bold */
+  color: #2c3e50;
+}
+
+.custom-calendar-style .rbc-btn-group button {
+  background-color: #6c757d; /* Gri pentru butoane inactive */
+  color: white;
+  border: none;
+  padding: 9px 14px; /* Padding ajustat */
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border-radius: 4px; /* Colțuri rotunjite pentru butoane */
+}
+.custom-calendar-style .rbc-btn-group button:not(:first-child):not(:last-child) {
+    border-radius: 0; /* Elimină rotunjirea pentru butoanele din mijlocul grupului */
+}
+.custom-calendar-style .rbc-btn-group button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.custom-calendar-style .rbc-btn-group button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.custom-calendar-style .rbc-btn-group button:hover,
+.custom-calendar-style .rbc-btn-group button:focus {
+  background-color: #5a6268;
+  outline: none;
+}
+
+.custom-calendar-style .rbc-btn-group button.rbc-active {
+  background-color: #007bff; /* Albastru pentru butonul activ (Month, Week, Day) */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+.custom-calendar-style .rbc-btn-group button.rbc-active:hover {
+  background-color: #0056b3;
+}
+
+
+/* Stilizarea Header-elor de Zi/Dată */
+.custom-calendar-style .rbc-header {
+  background-color: #f8f9fa;
+  padding: 10px 0; /* Padding mărit */
+  font-weight: 600; /* Mai bold */
+  color: #495057;
+  border-bottom: 1px solid #ddd;
+  text-align: center; /* Centrează textul din header */
+}
+
+/* Stilizarea Celulelor de Zi */
+.custom-calendar-style .rbc-day-bg {
+  border-left: 1px solid #f0f0f0;
+}
+.custom-calendar-style .rbc-day-bg:first-child {
+  border-left: none;
+}
+.custom-calendar-style .rbc-today {
+  background-color: #e6f7ff !important; /* Fundal mai vizibil pentru ziua curentă, cu !important */
+}
+.custom-calendar-style .rbc-off-range-bg {
+    background-color: #fdfdfd; /* Fundal foarte deschis pentru zilele din afara lunii curente */
+}
+
+
+/* Stil de bază pentru toate evenimentele noastre customizate */
+.custom-rbc-event {
+  padding: 4px 8px; /* Padding intern pentru textul evenimentului */
+  border-radius: 4px;
+  color: white !important; /* Asigură text alb pe fundaluri colorate */
+  font-size: 0.8em; /* Font puțin mai mic pentru a încăpea mai multe */
+  border: 1px solid rgba(0,0,0,0.2); /* O bordură subtilă */
+  transition: all 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer; /* Indică faptul că evenimentele sunt clickabile */
+}
+
+.custom-rbc-event:hover {
+    filter: brightness(115%); /* Mai luminos la hover */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Umbră la hover */
+}
+
+/* Culoarea de fundal va fi setată de clasele de grup */
+.event-group-muzica { background-color: #007bff; border-color: #0056b3; }
+.event-group-teatru { background-color: #6f42c1; border-color: #532f94; }
+.event-group-arta { background-color: #fd7e14; border-color: #c9650e; }
+.event-group-film { background-color: #dc3545; border-color: #a71d2a; }
+.event-group-literatura { background-color: #17a2b8; border-color: #10707f; }
+/* Adaugă o culoare default dacă grupul nu e mapat */
+.custom-rbc-event:not([class*="event-group-"]) { 
+  background-color: #6c757d; /* Gri default */
+  border-color: #545b62;
+}
+
+
+/* Stil pentru evenimentele adăugate/highlighted */
+/* Adaugă o bordură proeminentă sau o iconiță, fără a schimba background-ul grupului */
+.highlighted-event {
+  /* Poți alege una sau mai multe din următoarele: */
+  border: 2px dashed white !important; /* O bordură albă, punctată, proeminentă */
+  box-shadow: 0 0 0 2px #28a745 inset, 0 0 5px #28a745; /* O "strălucire" verde */
+  /* Sau adaugă un pseudo-element cu o iconiță */
+  position: relative; /* Necesar pentru pseudo-elemente absolute */
+}
+.highlighted-event::after {
+  content: '✔'; /* Sau o iconiță SVG ca data-uri, sau un caracter unicode */
+  color: white;
+  background-color: #28a745;
+  padding: 0px 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  line-height: 1;
+}
+
+
+/* Stil pentru evenimentele selectate (prin click în calendar) */
+.selected-event, .rbc-event.rbc-selected {
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.7) inset !important; /* O bordură interioară galbenă puternică */
+  filter: brightness(120%) !important; /* Puțin mai luminos când e selectat */
+}
+
+/* Stil pentru pop-up-ul "+X more" din month view */
+.rbc-overlay {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.rbc-overlay-header {
+    background-color: #f0f0f0;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}

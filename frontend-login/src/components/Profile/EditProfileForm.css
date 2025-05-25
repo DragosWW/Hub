@@ -1,0 +1,134 @@
+/* frontend/src/components/Profile/EditProfileForm.css */
+
+.edit-profile-container {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.edit-profile-title,
+.change-password-title {
+  color: #0056b3;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  text-align: left; /* Sau center, după preferință */
+}
+
+.feedback-message {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.error-message {
+  color: #D8000C;
+  border: 1px solid #FFD2D2;
+  background-color: #FFEDED;
+}
+
+.success-message {
+  color: #270; /* Verde mai închis */
+  border: 1px solid #DFF2BF;
+  background-color: #F6FBF0;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"],
+.form-section input[type="email"] /* Adăugat pentru consistență viitoare */ {
+  width: calc(100% - 24px); /* Ajustat pentru padding și border */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Asigură că padding-ul nu mărește lățimea totală */
+}
+
+.avatar-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+  display: block; /* Pentru a putea centra cu margin: auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar-change-button {
+  padding: 8px 15px;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.avatar-change-button:hover {
+  background-color: #e0e0e0;
+}
+
+.form-actions {
+  margin-top: 30px;
+}
+
+.form-button {
+  padding: 12px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.save-button {
+  background-color: #28a745; /* Verde */
+}
+.save-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.cancel-button {
+  background-color: #6c757d; /* Gri */
+}
+.cancel-button:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.change-password-button {
+  background-color: #ffc107; /* Galben */
+  color: black;
+}
+.change-password-button:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.change-password-form {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px dashed #ccc;
+}

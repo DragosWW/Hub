@@ -1,0 +1,53 @@
+# Dependințe și directoare de build specifice Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fișiere de mediu - NU le urca NICIODATĂ în repository!
+.env
+.env.*
+!.env.example # Permite .env.example dacă îl folosești
+
+# Directoare de build/distribuție
+build/
+dist/
+out/
+
+# Log-uri
+logs/
+*.log
+coverage/
+
+# Fișiere specifice sistemului de operare
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Fișiere specifice IDE-urilor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Specific pentru frontend (Create React App / Vite)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/coverage/
+
+# Specific pentru backend
+backend/node_modules/
+backend/.env # Asigură-te că și acesta este ignorat
+backend/coverage/
+
+# Uploads (de exemplu, avatarele utilizatorilor)
+# Este mai bine să nu le incluzi în repository.
+# Dacă vrei să păstrezi structura folderului, poți adăuga un fișier .gitkeep în el.
+backend/public/uploads/

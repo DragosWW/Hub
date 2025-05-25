@@ -1,0 +1,122 @@
+/* frontend/src/pages/DashboardPage.css */
+.dashboard-container {
+  max-width: 750px; /* Lățime puțin mai mare pentru a include formularul de editare confortabil */
+  margin: 30px auto;
+  padding: 30px 35px; /* Padding puțin mai mare */
+  border: 1px solid #dee2e6; /* Bordură mai subtilă */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Umbră mai fină */
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 35px; /* Spațiu mai mare sub header */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1; /* Linie de separare subtilă */
+}
+
+.dashboard-avatar {
+  width: 130px; /* Mărime puțin mai mare */
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff; /* Bordură mai proeminentă și colorată */
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-title {
+  color: #2c3e50; /* Albastru închis/gri */
+  margin: 0 0 8px 0;
+  font-size: 2.2em; /* Mărime mai mare */
+  font-weight: 600;
+}
+
+.dashboard-welcome {
+  color: #495057; /* Gri mai închis */
+  font-size: 1.15em;
+}
+
+.profile-details {
+  /* Nu mai are nevoie de border-top dacă e primul element după header */
+  padding-top: 10px; /* Puțin spațiu sus */
+}
+
+.profile-details-title {
+  color: #0056b3; /* Albastru specific */
+  border-bottom: 2px solid #0056b3; /* Linie accentuată sub titlu */
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.8em; /* Mărime mai mare */
+  font-weight: 500;
+}
+
+.profile-detail-item {
+  font-size: 1.1em;
+  margin: 15px 0; /* Spațiere mai mare între itemi */
+  color: #343a40; /* Text mai închis */
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #e9ecef; /* Linie punctată subtilă între itemi */
+}
+.profile-detail-item:last-child {
+    border-bottom: none; /* Elimină bordura pentru ultimul element */
+}
+
+
+.profile-detail-item strong {
+  color: #212529; /* Negru/gri foarte închis pentru etichete */
+  margin-right: 8px;
+  min-width: 120px; /* Pentru aliniere, dacă dorești */
+  display: inline-block;
+}
+
+.user-id-text {
+  font-size: 0.9em;
+  margin-top: 20px;
+  color: #6c757d;
+}
+
+.dashboard-actions {
+  margin-top: 30px;
+  display: flex; /* Aliniază butoanele */
+  gap: 15px; /* Spațiu între butoane */
+  justify-content: flex-start; /* Aliniază la stânga, sau center */
+}
+
+.dashboard-button {
+  padding: 12px 22px; /* Padding mai mare pentru butoane */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.dashboard-button:active {
+    transform: scale(0.98);
+}
+
+.edit-button {
+  background-color: #17a2b8; /* Info/Cyan */
+}
+.edit-button:hover {
+  background-color: #138496;
+}
+
+.logout-button {
+  background-color: #dc3545; /* Danger/Red */
+}
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Containerul pentru formularul de editare (când este vizibil) */
+/* EditProfileForm va avea propriul său CSS, dar putem adăuga un spațiu aici */
+.edit-profile-form-wrapper {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
